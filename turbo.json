@@ -1,0 +1,36 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**"]
+    },
+    "export": {
+      "dependsOn": ["^export"],
+      "outputs": [".next/**", "out/**"]
+    },
+    "lint:js": {
+      "inputs": ["./**/*.js", "./**/*.ts", "./**/*.tsx"]
+    },
+    "lint:css": {
+      "inputs": ["./src/**/*.css"]
+    },
+    "lint:format": {
+      "inputs": [
+        "./**/*.js",
+        "./**/*.tsx",
+        "./**/*.md",
+        "./**/*.css",
+        "./**/*.json"
+      ]
+    }
+  },
+  "globalDependencies": [
+    ".env",
+    ".eslintrc.js",
+    "tsconfig.json",
+    "postcss.config.js",
+    "stylelint.config.js",
+    "prettier.config.js"
+  ]
+}
