@@ -1,7 +1,9 @@
 import { trpc } from '~/utils/trpc';
 
 const IndexPage = () => {
-  const { data, error } = trpc.oxr.latest.useQuery();
+  const { data, error } = trpc.oxr.latest.useQuery({
+    symbols: 'USD,GBP,EUR',
+  });
 
   if (error?.message) {
     return (
