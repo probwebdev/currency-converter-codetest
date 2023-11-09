@@ -1,0 +1,10 @@
+.button-links {
+  & a {
+    &,
+    &:focus,
+    &:visited,
+    &:active {
+      color: currentColor;
+    }
+  }
+}
