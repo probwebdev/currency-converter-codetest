@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 
 import { ChooseDatesPopover } from '~/components/ChooseDatesPopover';
+import { Toolbar } from '~/containers/Toolbar';
 import { useCurrenciesList } from '~/hooks/useCurrenciesList';
 import { trpc } from '~/utils/trpc';
 
@@ -52,22 +53,27 @@ const HistoryPage = () => {
 
   return (
     <div className="m-auto flex min-w-card flex-col items-center gap-4 rounded-xl border-2 border-neutral-200 bg-white p-8 drop-shadow">
-      <div className="flex w-full flex-row items-center justify-between gap-4">
-        <ChooseDatesPopover
-          mode="multiple"
-          label="Choose Dates"
-          toDate={new Date()}
-          fromDate={dayjs('1999-01-01').toDate()}
-          selected={selectedDates}
-          onSelect={(values) => {
-            const dates = values ?? [];
+      <Toolbar>
+        <div className="mr-auto">
+          <ChooseDatesPopover
+            className="mr-auto"
+            mode="multiple"
+            label="Choose Dates"
+            toDate={new Date()}
+            fromDate={dayjs('1999-01-01').toDate()}
+            selected={selectedDates}
+            onSelect={(values) => {
+              const dates = values ?? [];
 
-            if (dates.length < 3) {
-              setSelectedDates(dates.sort((a, b) => a.getTime() - b.getTime()));
-            }
-          }}
-        />
-      </div>
+              if (dates.length < 3) {
+                setSelectedDates(
+                  dates.sort((a, b) => a.getTime() - b.getTime())
+                );
+              }
+            }}
+          />
+        </div>
+      </Toolbar>
       <div className="flex w-full flex-row items-center justify-end">
         <span>
           {selectedDates
