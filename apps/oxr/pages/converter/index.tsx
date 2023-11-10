@@ -10,7 +10,7 @@ const BASE = 'USD';
 
 const ConverterPage = () => {
   const [amount, setAmount] = useState(1);
-  const [selectedCurrencies, setSelectedCurrencies] = useState([
+  const [selectedCurrencies] = useState([
     'USD',
     'GBP',
     'EUR',

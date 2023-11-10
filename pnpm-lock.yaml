@@ -56,6 +56,9 @@ importers:
       '@oxr/api':
         specifier: workspace:^
         version: link:../../packages/api
+      '@plq/use-persisted-state':
+        specifier: ^1.2.0
+        version: 1.2.0(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
         version: 2.0.6(@types/react-dom@18.2.14)(@types/react@18.2.36)(react-dom@18.2.0)(react@18.2.0)
@@ -928,6 +931,23 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       tslib: 2.6.2
+    dev: false
+
+  /@plq/is@1.4.0:
+    resolution: {integrity: sha512-vCFxDJyWK+9pryWrLJUI/I4bj+p4N+2nB9QgAPhShFZ885E5JIms3L1Yk3ODALCBa+pq2P0olJJ6/uShRkYxfw==}
+    engines: {node: '>=16.0.0'}
+    dev: false
+
+  /@plq/use-persisted-state@1.2.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-zzoEltLpTKPnXy6Zwpy4ui6CB2Mr7tFW1tKP5LzcyNU/50jRgNwfHg/Kqp3tJBTj5bjlGdJ1wH8wAiCcZKDM4g==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      '@plq/is': 1.4.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@polka/url@1.0.0-next.23:
