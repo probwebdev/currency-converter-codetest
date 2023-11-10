@@ -1,5 +1,5 @@
 const IndexPage = () => {
-  return <>Welcome! Choose path:</>;
+  return <>Welcome! Choose utility</>;
 };
 
 export default IndexPage;

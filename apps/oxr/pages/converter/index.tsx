@@ -33,7 +33,7 @@ const ConverterPage = () => {
   }
 
   return (
-    <div className="m-auto flex min-w-card flex-col items-center gap-4 rounded-xl border-2 border-neutral-200 bg-white p-8 drop-shadow">
+    <>
       <Toolbar />
       <ul className="flex w-full list-none flex-col gap-4 p-0">
         {selectedCurrencies.map((currency) => {
@@ -72,7 +72,7 @@ const ConverterPage = () => {
           );
         })}
       </ul>
-    </div>
+    </>
   );
 };
 

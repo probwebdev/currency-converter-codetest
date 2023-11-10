@@ -2,18 +2,10 @@ import Link from 'next/link';
 
 export const Navigation = () => {
   return (
-    <div className="button-links flex w-full flex-row flex-nowrap justify-between gap-4 text-black">
-      <div className="flex flex-row flex-nowrap gap-2">
-        <Link href="/">
-          Home
-        </Link>
-        <Link href="/converter">
-          Converter
-        </Link>
-        <Link href="/history">
-          History
-        </Link>
-      </div>
+    <div className="button-links flex min-w-card flex-row flex-nowrap justify-stretch gap-4 rounded-xl border-2 border-neutral-200 bg-white p-4 text-black text-center drop-shadow">
+      <Link className="flex-auto" href="/">Home</Link>
+      <Link className="flex-auto" href="/converter">Converter</Link>
+      <Link className="flex-auto" href="/history">History</Link>
     </div>
   );
 };
