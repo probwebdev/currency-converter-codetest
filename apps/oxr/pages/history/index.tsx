@@ -54,7 +54,7 @@ const HistoryPage = () => {
   return (
     <>
       <Toolbar>
-        <div className="mr-auto">
+        <div className="ml-auto">
           <ChooseDatesPopover
             className="mr-auto"
             mode="multiple"
